@@ -1,4 +1,3 @@
-import React from "react";
 import ClockDigit from "./ClockDigit";
 
 interface ClockDigitProps {

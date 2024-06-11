@@ -1,5 +1,4 @@
-"use client";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import ClockDigitsWrapper from "./ClockDigitsWrapper";
 
 const Clock = () => {

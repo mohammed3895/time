@@ -1,5 +1,3 @@
-"use client";
-
 import { cn } from "@/lib/utils";
 import moment from "moment";
 import { useEffect, useState } from "react";
