@@ -1,0 +1,193 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 142.1 76.2% 36.3%;
+    --primary-foreground: 355.7 100% 97.3%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 142.1 76.2% 36.3%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 20 14.3% 4.1%;
+    --foreground: 0 0% 95%;
+    --card: 24 9.8% 10%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 142.1 70.6% 45.3%;
+    --primary-foreground: 144.9 80.4% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 12 6.5% 15.1%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 142.4 71.8% 29.2%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+* {
+  @apply border-border;
+}
+
+.rbc-month-view {
+  @apply border border-border rounded-md;
+}
+
+.rbc-toolbar-label {
+  @apply text-muted-foreground my-2;
+}
+
+.rbc-month-header {
+  @apply py-2 mb-2;
+}
+
+.rbc-btn-group {
+  @apply inline-flex space-x-2 items-center gap-2;
+}
+.rbc-btn-group button {
+  @apply rounded-md border-border first:rounded-md;
+}
+
+.rbc-day-bg {
+  @apply flex items-center justify-center !border-accent;
+}
+
+.rbc-off-range-bg {
+  @apply !bg-muted !text-muted-foreground;
+}
+
+.rbc-today {
+  @apply !bg-primary;
+}
+
+.rbc-current {
+  @apply text-foreground !font-normal;
+}
+
+.rbc-now {
+  @apply text-foreground !font-normal;
+}
+
+.rbc-active {
+  @apply !bg-primary !border-primary !text-foreground;
+}
+
+.rbc-btn-group {
+  @apply !border-primary !text-sm !text-foreground;
+}
+
+.rbc-header {
+  @apply !text-sm !text-foreground !border-accent !font-normal;
+}
+
+.rbc-month-row {
+  @apply !border-accent;
+}
+
+/* TIME */
+.rbc-time-view {
+  @apply !border-accent !rounded-lg;
+}
+
+.rbc-time-header {
+  @apply !border-accent;
+}
+
+.rbc-time-header-content {
+  @apply !border-accent;
+}
+
+.rbc-time-content {
+  @apply !border-accent;
+}
+
+.rbc-today {
+  @apply !bg-accent;
+}
+
+.rbc-timeslot-group {
+  @apply !border-accent;
+}
+
+.rbc-time-gutter {
+  @apply !border-accent;
+}
+
+.rbc-day-slot {
+  @apply !border-accent;
+}
+.rbc-time-column {
+  @apply !border-accent;
+}
+
+.rbc-day-slot .rbc-time-slot {
+  @apply !border-accent;
+}
+
+.rbc-time-content {
+  @apply !border-accent;
+}
+
+.rbc-time-content > * + * > * {
+  @apply !border-accent;
+}
+
+.rbc-event {
+  @apply !bg-primary/50 !text-sm;
+}
+.rbc-selected {
+  @apply !bg-primary/50;
+}
+
+/* AGENDA */
+.rbc-agenda-view {
+  @apply !border-accent;
+}
+
+.rbc-agenda-table {
+  @apply !border-accent;
+}
+
+.rbc-agenda-table tr {
+  @apply !border-accent;
+}
+
+.rbc-agenda-table tr th {
+  @apply !border-accent;
+}
+
+.rbc-agenda-table tr td {
+  @apply !border-accent;
+}
