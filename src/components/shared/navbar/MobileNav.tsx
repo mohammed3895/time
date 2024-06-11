@@ -1,15 +1,5 @@
 import { Button } from "@/components/ui/button";
-import {
-  Sheet,
-  SheetClose,
-  SheetContent,
-  SheetFooter,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
-import Logo from "./Logo";
-import AddEvent from "@/components/AddEvent";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import NavItems from "./NavItems";
 import { CiMenuFries } from "react-icons/ci";
 
