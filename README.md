@@ -12,5 +12,6 @@ TikTuk is theme of time based web app that make use of time to schedule your eve
 # Technologies used
 
 - **Frontend:** React - Vite, Tailwindcss, shad-cn, react-big-calendar
+- **Frontend:** RapidApi
 
 Designed & Developed By **[Mohammed Sameer](https://www.linkedin.com/in/mohammed-sameer-bb81b3151/)**
