@@ -14,15 +14,19 @@ getLocation();
 const ClientLocation = () => {
   const [temp, setTemp] = useState("");
   const [weather, setWeather] = useState("");
-  const country = localStorage.getItem("country");
   const city = localStorage.getItem("city");
+  const [location, setLocation] = useState({ c: "", cunt: "" });
 
   const options = {
     method: "GET",
-    url: `https://open-weather13.p.rapidapi.com/city/${city}/${country}`,
+    url: "https://weatherapi-com.p.rapidapi.com/forecast.json",
+    params: {
+      q: city,
+      days: "3",
+    },
     headers: {
       "x-rapidapi-key": "6b0bbcabe1msh6201631009263e9p1e84acjsnd980b9516044",
-      "x-rapidapi-host": "open-weather13.p.rapidapi.com",
+      "x-rapidapi-host": "weatherapi-com.p.rapidapi.com",
     },
   };
 
@@ -30,12 +34,13 @@ const ClientLocation = () => {
     const fetchData = async () => {
       try {
         const response = await axios.request(options);
-        const convertedTemp = (
-          ((response.data.main.temp - 32) * 5) /
-          9
-        ).toFixed(0);
+        const data = response.data;
+        console.log(data);
+        const convertedTemp = data.current.temp_c;
+
         setTemp(convertedTemp.toString());
-        setWeather(response.data.weather[0].main);
+        setWeather(data.current.condition.text);
+        setLocation({ c: data.location.name, cunt: data.location.country });
       } catch (error) {
         console.error(error);
       }
@@ -45,7 +50,12 @@ const ClientLocation = () => {
   }, []);
 
   return (
-    <LocationCard country={country} city={city} temp={temp} weather={weather} />
+    <LocationCard
+      country={location.cunt}
+      city={location.c}
+      temp={temp}
+      weather={weather}
+    />
   );
 };
 
