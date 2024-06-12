@@ -72,7 +72,7 @@ const ClockCard = () => {
   return (
     <div
       className={cn(
-        "flex flex-col bg-background transition-colors ease-in-out items-center justify-center gap-3 w-full  text-xl p-4 md:p-8 rounded-lg border"
+        "flex flex-col bg-background transition-colors ease-in-out items-center justify-center gap-3 w-full  text-xl p-4 md:p-8 rounded-xl shadow-lg"
       )}
     >
       {timeOfDay && (
