@@ -9,7 +9,11 @@ const Clock = ({ date }: { date: Date }) => {
 
   return (
     <div className="flex items-center justify-center gap-3">
-      <ClockDigitsWrapper hours={hours} minutes={minutes} seconds={seconds} />
+      <ClockDigitsWrapper
+        hours={Number(hours)}
+        minutes={Number(minutes)}
+        seconds={Number(seconds)}
+      />
       <div className="w-10 md:w-12 h-10 md:h-12 min-w-10 md:min-w-12 rounded-md p-4 flex items-center justify-center text-base md:text-xl border">
         <h1>{date.getHours() >= 12 ? "PM" : "AM"}</h1>
       </div>
