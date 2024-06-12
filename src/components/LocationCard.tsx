@@ -24,10 +24,10 @@ const LocationCard = ({
             {weather}
           </h3>
         ) : (
-          <TextLoading />
+          <TextLoading className="mt-1.5" />
         )}
       </div>
-      {country != null ? (
+      {country ? (
         <h3 className="text-base font-medium">
           {country} - {city}
         </h3>
