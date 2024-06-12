@@ -23,7 +23,7 @@ const ClockCard = () => {
     setTimeZones(timeZones);
     const timer = setInterval(() => {
       setDate(new Date());
-    }, 60000);
+    }, 1000);
 
     return () => clearInterval(timer);
   }, [timeZones]);

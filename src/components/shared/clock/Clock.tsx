@@ -1,19 +1,6 @@
-import { useEffect, useState } from "react";
 import ClockDigitsWrapper from "./ClockDigitsWrapper";
 
-const Clock = () => {
-  const [date, setDate] = useState(new Date()); // Initialize state with the current date and time
-
-  useEffect(() => {
-    const timerId = setInterval(() => {
-      setDate(new Date()); // Update the date state every second
-    }, 1000);
-
-    return () => {
-      clearInterval(timerId); // Clear the interval on component unmount
-    };
-  }, []);
-
+const Clock = ({ date }: { date: Date }) => {
   const hours = (date.getHours() % 12 === 0 ? 12 : date.getHours() % 12)
     .toString()
     .padStart(2, "0");
