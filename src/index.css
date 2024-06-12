@@ -54,11 +54,16 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-accent text-foreground;
   }
 }
 * {
   @apply border-border;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: auto;
 }
 
 .rbc-month-view {

@@ -50,6 +50,7 @@ const ClockCard = () => {
   const hours = date.getHours();
   const timeOfDay = getTimeOfDay(hours);
 
+  // Renders the time zones
   const renderTimeZones = () => {
     return timeZones.map((tz, index) => {
       const timeZoneDate = new Date(
@@ -72,11 +73,11 @@ const ClockCard = () => {
   return (
     <div
       className={cn(
-        "flex flex-col bg-background transition-colors ease-in-out items-center justify-center gap-3 w-full  text-xl p-4 md:p-8 rounded-xl shadow-lg"
+        "flex flex-col bg-background transition-colors ease-in-out items-center justify-center gap-3 w-full  text-xl p-4 md:p-8 rounded-xl lg:max-w-5xl shadow-lg"
       )}
     >
       {timeOfDay && (
-        <div className="flex items-end gap-4 mb-6">
+        <div className="flex justify-between w-full p-4 rounded-md border items-start  gap-4 mb-6 md:mb-6">
           <timeOfDay.Icon className="w-10 h-10 text-yellow-600" />
           <ClientLocation />
         </div>

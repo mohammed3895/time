@@ -1,5 +1,7 @@
 import { NAVITEMS } from "@/constants/headerItems";
 import Navlink from "./Navlink";
+import StopWatch from "../StopWatch";
+import Timer from "../clock/Timer";
 
 const NavItems = ({ onClick }: { onClick: () => void }) => {
   return (
@@ -8,6 +10,8 @@ const NavItems = ({ onClick }: { onClick: () => void }) => {
         {NAVITEMS.map((item) => (
           <Navlink key={item.href} item={item} onClick={onClick} />
         ))}
+        <StopWatch />
+        <Timer initialSeconds={0} />
       </div>
     </div>
   );

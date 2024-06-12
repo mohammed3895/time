@@ -52,7 +52,7 @@ const CreateEventModal = () => {
   };
 
   return (
-    <AlertDialog open={isOpen}>
+    <AlertDialog open={isOpen} onOpenChange={() => setIsOpen(!isOpen)}>
       <AlertDialogTrigger>
         <Button
           onClick={() => setIsOpen(true)}

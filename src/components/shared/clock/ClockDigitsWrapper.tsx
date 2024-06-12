@@ -1,10 +1,10 @@
 import ClockDigit from "./ClockDigit";
 
 interface ClockDigitProps {
-  hours: string;
-  minutes: string;
-  seconds: string;
-  milliseconds?: string;
+  hours: number;
+  minutes: number;
+  seconds: number;
+  milliseconds?: number;
 }
 
 const ClockDigitsWrapper = ({
@@ -19,8 +19,8 @@ const ClockDigitsWrapper = ({
       :
       <ClockDigit digit={minutes} />
       :
-      <ClockDigit digit={seconds} />:
-      {milliseconds && <ClockDigit digit={milliseconds} />}
+      <ClockDigit digit={seconds} />
+      {milliseconds && ': ' + <ClockDigit digit={milliseconds} />}
     </div>
   );
 };

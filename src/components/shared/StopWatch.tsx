@@ -29,21 +29,21 @@ const StopWatch = () => {
   return (
     <Dialog>
       <DialogTrigger className="w-full">
-        <Button variant="secondary" size="sm" className="w-full flex gap-2">
+        <Button variant="ghost" size="sm" className="w-full flex gap-2 justify-start md:justify-center">
           <LuTimer className="w-5 h-5 text-primary" /> Stop Watch
         </Button>
       </DialogTrigger>
       <DialogContent className=" flex flex-col items-center justify-center">
         <DialogTitle>Stop Watch</DialogTitle>
         <div className="w-full flex items-center justify-center gap-2">
-          <ClockDigit digit={(hours < 10 ? "0" : "") + hours.toString()} />
+          <ClockDigit digit={hours} />
           :
-          <ClockDigit digit={(minutes < 10 ? "0" : "") + minutes.toString()} />
+          <ClockDigit digit={minutes} />
           :
-          <ClockDigit digit={(seconds < 10 ? "0" : "") + seconds.toString()} />
+          <ClockDigit digit={seconds} />
           :
           <ClockDigit
-            digit={(milliseconds < 10 ? "0" : "") + milliseconds.toString()}
+            digit={milliseconds}
           />
         </div>
         <div className="flex w-full items-center justify-between gap-4 mt-4">

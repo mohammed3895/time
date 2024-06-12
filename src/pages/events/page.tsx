@@ -69,7 +69,7 @@ const EventsPage = () => {
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
-      <div className="mx-auto w-full md:w-3/4">
+      <div className="mx-auto w-full md:w-3/4 p-4 bg-background rounded-lg shadow-xl">
         <Calendar
           localizer={localizer}
           events={events}

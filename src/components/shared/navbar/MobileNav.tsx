@@ -3,8 +3,6 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import NavItems from "./NavItems";
 import { CiMenuFries } from "react-icons/ci";
 import { useState } from "react";
-import StopWatch from "../StopWatch";
-import Timer from "../clock/Timer";
 
 export function MobilNav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,8 +21,6 @@ export function MobilNav() {
       <SheetContent>
         <div className="w-full h-full flex flex-col items-start justify-start gap-4 mt-8">
           <NavItems onClick={() => setIsOpen(!isOpen)} />
-          <StopWatch />
-          <Timer initialSeconds={60} />
         </div>
       </SheetContent>
     </Sheet>

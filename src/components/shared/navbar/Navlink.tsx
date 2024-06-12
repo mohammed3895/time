@@ -12,8 +12,8 @@ const Navlink = ({ item, onClick }: ItemProps) => {
     <Link
       to={item.href}
       className={cn(
-        buttonVariants({ variant: "secondary", size: "sm" }),
-        "w-full flex gap-2 capitalize"
+        buttonVariants({ variant: "ghost", size: "sm" }),
+        "w-full flex gap-2 capitalize justify-start md:justify-center"
       )}
       onClick={onClick}
     >
