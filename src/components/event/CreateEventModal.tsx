@@ -54,7 +54,10 @@ const CreateEventModal = () => {
   return (
     <AlertDialog open={isOpen}>
       <AlertDialogTrigger>
-        <Button onClick={() => setIsOpen(true)} className="mt-4 w-full">
+        <Button
+          onClick={() => setIsOpen(true)}
+          className="mt-4 w-full text-white"
+        >
           Add Event
         </Button>
       </AlertDialogTrigger>

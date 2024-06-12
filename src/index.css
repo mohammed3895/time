@@ -101,7 +101,7 @@
 }
 
 .rbc-active {
-  @apply !bg-primary !border-primary !text-foreground;
+  @apply !bg-primary !border-primary !text-white;
 }
 
 .rbc-btn-group {

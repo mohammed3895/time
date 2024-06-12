@@ -29,7 +29,7 @@ const StopWatch = () => {
   return (
     <Dialog>
       <DialogTrigger className="w-full">
-        <Button variant="secondary" className="w-full flex gap-2">
+        <Button variant="secondary" size="sm" className="w-full flex gap-2">
           <LuTimer className="w-5 h-5 text-primary" /> Stop Watch
         </Button>
       </DialogTrigger>

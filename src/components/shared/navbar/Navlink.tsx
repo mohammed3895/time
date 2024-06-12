@@ -11,7 +11,7 @@ const Navlink = ({ item }: ItemProps) => {
     <Link
       to={item.href}
       className={cn(
-        buttonVariants({ variant: "secondary" }),
+        buttonVariants({ variant: "secondary", size: "sm" }),
         "w-full flex gap-2 capitalize"
       )}
     >
