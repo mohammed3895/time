@@ -4,10 +4,12 @@ import Footer from "../shared/Footer";
 
 const MainLayout = () => {
   return (
-    <main className="w-full h-dvh flex flex-col">
-      <Navbar />
-      <Outlet />
-      <Footer />
+    <main className="w-full min-h-dvh flex flex-col">
+      <div className="w-full h-full flex flex-col justify-between items-center">
+        <Navbar />
+        <Outlet />
+        <Footer />
+      </div>
     </main>
   );
 };
