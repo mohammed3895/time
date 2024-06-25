@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { FaCloudMoon } from "react-icons/fa6";
 import { IoMdPartlySunny } from "react-icons/io";
 import Clock from "./Clock";
-import { useTheme } from "@/components/theme-provider";
+import { useTheme } from "@/hooks/use-theme";
 import ClientLocation from "@/components/ClientLocation";
 
 const ClockCard = () => {
