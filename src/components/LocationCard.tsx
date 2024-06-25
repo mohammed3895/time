@@ -1,5 +1,3 @@
-import TextLoading from "./shared/TextLoading";
-
 const LocationCard = ({
   country,
   city,
@@ -14,26 +12,18 @@ const LocationCard = ({
   return (
     <div className="flex w-full items-start justify-between gap-8">
       <div className="flex flex-col items-center justify-center">
-        {temp ? (
-          <h1 className="text-4xl font-bold">{temp}°</h1>
-        ) : (
-          <TextLoading />
-        )}
+        {temp ? <h1 className="text-4xl font-bold">{temp}°</h1> : null}
         {weather ? (
           <h3 className="text-base font-medium text-muted-foreground">
             {weather}
           </h3>
-        ) : (
-          <TextLoading className="mt-1.5" />
-        )}
+        ) : null}
       </div>
       {country ? (
         <h3 className="text-base font-medium">
           {country} - {city}
         </h3>
-      ) : (
-        <TextLoading />
-      )}
+      ) : null}
     </div>
   );
 };

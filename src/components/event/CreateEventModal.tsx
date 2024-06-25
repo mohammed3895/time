@@ -8,7 +8,14 @@ import {
   AlertDialogTrigger,
 } from "../ui/alert-dialog";
 import { Button } from "../ui/button";
-import { Form, FormControl, FormField, FormItem, FormLabel } from "../ui/form";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "../ui/form";
 import { Input } from "../ui/input";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -80,6 +87,11 @@ const CreateEventModal = () => {
                     <FormControl>
                       <Input {...field} />
                     </FormControl>
+                    {form.formState.errors.name && (
+                      <FormMessage>
+                        {form.formState.errors.name.message}
+                      </FormMessage>
+                    )}
                   </FormItem>
                 )}
               />
@@ -92,6 +104,11 @@ const CreateEventModal = () => {
                     <FormControl>
                       <Input {...field} />
                     </FormControl>
+                    {form.formState.errors.description && (
+                      <FormMessage>
+                        {form.formState.errors.description.message}
+                      </FormMessage>
+                    )}
                   </FormItem>
                 )}
               />
@@ -103,6 +120,11 @@ const CreateEventModal = () => {
                   render={({ field }) => (
                     <FormItem className="flex flex-col w-full">
                       <FormLabel>Start Date</FormLabel>
+                      {form.formState.errors.start && (
+                        <FormMessage>
+                          {form.formState.errors.start.message}
+                        </FormMessage>
+                      )}
                       <Popover>
                         <PopoverTrigger asChild>
                           <FormControl>

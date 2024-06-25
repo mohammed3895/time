@@ -66,6 +66,9 @@ input[type="number"]::-webkit-inner-spin-button {
   margin: auto;
 }
 
+/* REACT BIG CALENDAR */
+
+/* MONTH VIEW */
 .rbc-month-view {
   @apply border border-border rounded-md;
 }

@@ -5,8 +5,8 @@ import { Provider } from "react-redux";
 import store from "./redux/store.ts";
 import { ThemeProvider } from "./components/theme-provider.tsx";
 import "react-big-calendar/lib/css/react-big-calendar.css";
-import "./index.css";
 import { Toaster } from "./components/ui/toaster.tsx";
+import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

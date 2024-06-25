@@ -8,6 +8,7 @@ TikTuk is theme of time based web app that make use of time to schedule your eve
 - **Calendar with event tracking**
 - **Stop Watch**
 - **Timer - Counter**
+- **Change theme from dark to light depending on time**
 
 # Technologies used
 

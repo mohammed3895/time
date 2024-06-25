@@ -13,6 +13,17 @@ import {
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
 import CreateEventModal from "@/components/event/CreateEventModal";
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 const localizer = momentLocalizer(moment);
 
@@ -28,6 +39,11 @@ const EventsPage = () => {
   const handleEventClick = (event: Event) => {
     setIsOpen(true);
     setSelectedEvent(event);
+  };
+
+  const handleDeleteEvent = () => {
+    setEvents(events.filter((e) => e.id !== selectedEvent?.id));
+    setIsOpen(false);
   };
 
   function formatDate(date: string | Date) {
@@ -46,13 +62,13 @@ const EventsPage = () => {
               <div className="flex items-center gap-3">
                 <p className="text-xs text-muted-foreground flex items-center gap-2">
                   <span className="font-semibold text-foreground text-sm">
-                    From
+                    Start Date
                   </span>{" "}
                   {selectedEvent?.start ? formatDate(selectedEvent.start) : ""}
                 </p>
                 <p className="text-xs text-muted-foreground flex items-center gap-2">
                   <span className="font-semibold text-foreground text-sm">
-                    To
+                    End Date
                   </span>{" "}
                   {selectedEvent?.end ? formatDate(selectedEvent.end) : ""}
                 </p>
@@ -64,8 +80,27 @@ const EventsPage = () => {
           </AlertDialogHeader>
           <AlertDialogFooter>
             <AlertDialogCancel onClick={() => setIsOpen(false)}>
-              Ok
+              Close
             </AlertDialogCancel>
+            <Dialog>
+              <DialogTrigger>
+                <Button variant="destructive">Delete</Button>
+              </DialogTrigger>
+              <DialogContent>
+                <DialogHeader>
+                  <DialogTitle>Are you sure?</DialogTitle>
+                  <DialogDescription>
+                    This action cannot be undone.
+                  </DialogDescription>
+                </DialogHeader>
+                <DialogFooter>
+                  <DialogClose>Cancel</DialogClose>
+                  <Button variant="destructive" onClick={handleDeleteEvent}>
+                    Delete
+                  </Button>
+                </DialogFooter>
+              </DialogContent>
+            </Dialog>
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>

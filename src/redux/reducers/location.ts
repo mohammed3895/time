@@ -11,17 +11,6 @@ const initialState: LocationState = {
   city: undefined,
 };
 
-// let ctry: string;
-// let cty: string;
-// const getLocation = async () => {
-//   const res = await axios.get("https://ipinfo.io?token=da5bd63581ff35");
-//   const data = await res.data;
-
-//   ctry = data.country;
-//   cty = data.city;
-// };
-// getLocation();
-
 const locationSlice = createSlice({
   name: "location",
   initialState,
