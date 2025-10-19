@@ -26,7 +26,7 @@ const LocationCard = ({
         {loading ? (
           <TextLoading className="h-6" />
         ) : (
-          <h1 className="text-2xl md:text-4xl font-bold">{temp}°</h1>
+          <h1 className="text-2xl md:text-4xl font-bold">{temp ?? 0}°</h1>
         )}
         {loading ? (
           <TextLoading className="h-3" />
